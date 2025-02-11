@@ -4,6 +4,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 
-body {
-  background-color: rgb(189, 189, 189);
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Base styles for sections */
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Section becomes visible when in view */
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Navbar styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-right: 2vw;
+    z-index: 1000;
+    height: 10vh;
+    /* height: 10vh; */
+}
+
+.navbar ul {
+    display: flex;
+    height: 100%;
+    align-content: center;
+    align-items: center;
+    justify-content: end;
+    gap: 2vw;
+    font-size: 1.2rem;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.navbar ul li a.active {
+    font-weight: bold;
+    text-decoration: none;
+    /* Remove default underline */
+    border-bottom: 0.6vh solid black;
+    padding-bottom: 1vh;
+}
+
+.navbar ul li a:hover {
+    cursor: pointer;
 }
