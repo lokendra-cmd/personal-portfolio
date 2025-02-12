@@ -14,11 +14,11 @@ import python from '@/app/Images/python.png'
 
 const Skills = () => {
     return (
-        <div className={`about h-[100%] flex flex-col justify-center bg-[rgb(189,189,189)] `}>
-            <h1 className='text-[2.5rem] text-center mb-[3vh]' style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)' }}>Skills</h1>
-            <div className="flex justify-center items-center mt-[5vh] gap-[10vw] ">
-                <div className='h-[30vw] w-[30vw] bg-white shadow-xl rounded-lg '>
-                    <h2 className='text-[1.5rem] text-center p-[1vh] font-bold' style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)' }}> Web Development Technologies</h2>
+        <div className={`about h-[100%] flex flex-col justify-center bg-[rgb(189,189,189)]  `}>
+            {/* <h1 className='text-[2.5rem] text-center mb-[3vh] mt-[8vh]'  style={{ textShadow: '2px 2px 4px rgba(255, 255, 255, 0.5)' }}>Skills</h1> */}
+            <div className="flex justify-center items-center mt-[8vh] gap-[12vw] ">
+                <div className='skillsCard h-[70vh] w-[30vw] pt-[2vh] pb-[2vh] '>
+                    <h2 className='text-[1.5rem] text-center p-[1vh] font-medium' style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)' }}> Web Development Technologies</h2>
 
                     <div className='ml-[2vw] mt-[3vh] flex flex-col gap-[4vh]'>
                         <div className='flex items-center justify-start gap-[2vw]  '>
@@ -49,8 +49,8 @@ const Skills = () => {
                     </div>
                 </div>
 
-                <div className='h-[30vw] w-[30vw] bg-white shadow-lg rounded-xl '>
-                    <h2 className='text-[1.5rem] text-center p-[1vh] font-bold' style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)' }}>Languages</h2>
+                <div className='skillsCard h-[70vh] w-[30vw] pt-[2vh] pb-[2vh] '>
+                    <h2 className='text-[1.5rem] text-center p-[1vh] font-medium' style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)' }}>Languages</h2>
 
                     <div className='ml-[2vw] mt-[3vh] flex flex-col gap-[2vh]'>
                         <div className='flex items-center justify-start gap-[2vw]  '>

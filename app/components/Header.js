@@ -10,7 +10,7 @@ const Header = ({ scrollToSection, activeSection }) => {
   return (
     <nav className="navbar ">
       <ul className={`${ubuntu.className}`}>
-        {["profile", "about", "skills", "projects", "education", "contacts"].map((section) => (
+        {["profile", "about","experience","projects","skills", "education", "contacts"].map((section) => (
           <li key={section}>
             <a
               href={`#${section}`}
@@ -20,7 +20,7 @@ const Header = ({ scrollToSection, activeSection }) => {
                 scrollToSection(section);
               }}
             >
-              {section.charAt(0).toUpperCase() + section.slice(1)}
+              {section==="profile"?"Home":section.charAt(0).toUpperCase() + section.slice(1)}
             </a>
           </li>
         ))}

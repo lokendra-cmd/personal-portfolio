@@ -1,10 +1,37 @@
 import React from 'react'
+import Image from 'next/image'
+import email from '@/app/Images/email.png'
+import phone from '@/app/Images/phone.png'
+import linkedin from '@/app/Images/linkedin.png'
+import github from '@/app/Images/github.png'
 
 const Contacts = () => {
     return (
-        <div className={`home h-[100vh] bg-white pt-[13vh] pl-[2vw]`}>
-            <h1 className='text-[2rem] text-left ml-[22vw]'>Contact</h1>
+        <div className={`contacts flex flex-col gap-[10vw] justify-center items-center h-[100%] bg-[rgb(189,189,189)] pt-[13vh] pl-[2vw]`}>
+            <h1 className='text-[4rem] '>Contact Me</h1>
 
+            <div className="contactIcons flex gap-[8vw]">
+                <div className="emailLogo flex flex-col justify-center items-center">
+                    <Image src={email} width={40} height={40} alt='email' />
+                    <span>Email</span>
+                </div>
+
+                <div className="phoneLogo flex flex-col justify-center items-center">
+                    <Image src={phone} width={40} height={40} alt='phone' />
+                    <span>Phone</span>
+                </div>
+
+                <div className="linkedinLogo flex flex-col justify-center items-center">
+                    <Image src={linkedin} width={40} height={40} alt='linkedin' />
+                    <span>Linkedin</span>
+                </div>
+
+                <div className="linkedinLogo flex flex-col justify-center items-center">
+                    <Image src={github} width={40} height={40} alt='github' />
+                    <span>Github</span>
+                </div>
+
+            </div>
 
         </div>
     )

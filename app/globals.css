@@ -14,7 +14,7 @@ section {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    height: 100vh;
+    height: 110vh;
 }
 
 /* Section becomes visible when in view */
@@ -98,19 +98,19 @@ section.visible {
     column-gap: 2vw;
     display: flex;
     position: absolute;
-    bottom: 0;
+    top: 85%;
     left: 0;
     right: 0;
 }
 
 .card .buttons button {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.5);
     font-size: 1.2rem;
     padding: 1vh;
     cursor: pointer;
     width: 8vw;
     border-radius: 1vh;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.7); */
     /* white shadow */
     transition: opacity 0.5s ease-in-out;
     /* Slow and smooth transition for opacity */
@@ -118,7 +118,38 @@ section.visible {
 }
 
 .card .buttons button:hover {
-    box-shadow: 0 0 15px rgba(255, 255, 255, 1);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
     /* more pronounced white shadow on hover */
     cursor: pointer;
+}
+
+.skillsCard {
+
+    background-color: #d1d1d1;
+    border-radius: 2vw;
+   
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Default light shadow */
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transitions for transform and shadow */
+   
+}
+
+.skillsCard:hover {
+    transform: translateY(-10px); /* Translate the div upwards slightly on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Increase the shadow for a glowing effect */
+
+}
+.experianceCards {
+
+    background-color: #d1d1d1;
+    border-radius: 2vw;
+   
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Default light shadow */
+  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transitions for transform and shadow */
+   
+}
+
+.experianceCards:hover {
+    transform: translateY(-10px); /* Translate the div upwards slightly on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Increase the shadow for a glowing effect */
+
 }

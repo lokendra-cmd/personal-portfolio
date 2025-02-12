@@ -7,6 +7,7 @@ import Skills from "@/app/components/Skills";
 import Projects from "@/app/components/Projects";
 import Education from "@/app/components/Education";
 import Contacts from "@/app/components/Contacts";
+import Experience from "./components/Experience";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("profile");
@@ -14,6 +15,7 @@ export default function Home() {
   const sectionsRef = {
     profile: useRef(null),
     about: useRef(null),
+    experience: useRef(null),
     skills: useRef(null),
     projects: useRef(null),
     education: useRef(null),
@@ -59,11 +61,15 @@ export default function Home() {
         <section id="about" ref={sectionsRef.about}>
           <About />
         </section>
-        <section id="skills" ref={sectionsRef.skills}>
-          <Skills />
+        <section id="experience" ref={sectionsRef.experience}>
+         <Experience/>
         </section>
+
         <section id="projects" ref={sectionsRef.projects}>
           <Projects />
+        </section>
+        <section id="skills" ref={sectionsRef.skills}>
+          <Skills />
         </section>
         <section id="education" ref={sectionsRef.education}>
           <Education />
