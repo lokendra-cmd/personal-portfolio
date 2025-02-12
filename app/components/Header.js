@@ -8,7 +8,7 @@ const ubuntu = Ubuntu({
 
 const Header = ({ scrollToSection, activeSection }) => {
   return (
-    <nav className="navbar ">
+    <nav className="navbar glassmorphism">
       <ul className={`${ubuntu.className}`}>
         {["profile", "about","experience","projects","skills", "education", "contacts"].map((section) => (
           <li key={section}>
