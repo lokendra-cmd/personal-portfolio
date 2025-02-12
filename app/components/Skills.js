@@ -17,7 +17,7 @@ const Skills = () => {
         <div className={`about h-[100%] flex flex-col justify-center bg-[rgb(189,189,189)] `}>
             <h1 className='text-[2.5rem] text-center mb-[3vh]' style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)' }}>Skills</h1>
             <div className="flex justify-center items-center mt-[5vh] gap-[10vw] ">
-                <div className='h-[30vw] w-[30vw] bg-white shadow-lg rounded-lg bg-opacity-70'>
+                <div className='h-[30vw] w-[30vw] bg-white shadow-xl rounded-lg '>
                     <h2 className='text-[1.5rem] text-center p-[1vh] font-bold' style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)' }}> Web Development Technologies</h2>
 
                     <div className='ml-[2vw] mt-[3vh] flex flex-col gap-[4vh]'>
@@ -49,7 +49,7 @@ const Skills = () => {
                     </div>
                 </div>
 
-                <div className='h-[30vw] w-[30vw] bg-white shadow-lg rounded-lg bg-opacity-70'>
+                <div className='h-[30vw] w-[30vw] bg-white shadow-lg rounded-xl '>
                     <h2 className='text-[1.5rem] text-center p-[1vh] font-bold' style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)' }}>Languages</h2>
 
                     <div className='ml-[2vw] mt-[3vh] flex flex-col gap-[2vh]'>
