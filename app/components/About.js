@@ -13,20 +13,23 @@ const About = () => {
                 <div className='w-[30vw] flex flex-col items-center'>
                     <p className='text-[1.2rem] my-[1vh]'>
                         I’m a MERN stack developer with experience in building
-                        optimized and dynamic websites. I’m passionate about
-                        development and always exploring new ways to enhance
-                        user experiences.
+                        optimized and dynamic websites. Passionate about
+                        development, I constantly explore new ways to
+                        enhance user experiences.
                     </p>
 
                     <p className='text-[1.2rem] my-[1vh]'>
-                        Apart from coding, I’m a fitness enthusiast who loves
-                        staying active. I enjoy reading books to keep learning
-                        and am also interested in the stock market and investing.
+                        Beyond coding, I’m a fitness enthusiast who loves staying active,
+                        a traveler capturing my personal perspectives through my
+                        camera, and an avid reader of
+                        philosophy and self-help books. I’m also interested in
+                        the stock market and investing.
                     </p>
 
                     <p className='text-[1.2rem] my-[1vh]'>
-                        Feel free to explore my projects or reach
-                        out if you'd like to connect for work!
+                        Feel free to explore my projects or
+                        reach out if you'd like to connect
+                        for work!
                     </p>
                 </div>
             </div>

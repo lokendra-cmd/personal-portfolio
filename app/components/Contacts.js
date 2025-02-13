@@ -13,22 +13,26 @@ const Contacts = () => {
             <div className="contactIcons flex gap-[8vw]">
                 <div className="emailLogo flex flex-col justify-center items-center">
                     <Image src={email} width={40} height={40} alt='email' />
-                    <span>Email</span>
+                    <span className='font-semibold'>Email</span>
+                    <span>lokendra69.lk@gmail.com</span>
                 </div>
 
                 <div className="phoneLogo flex flex-col justify-center items-center">
                     <Image src={phone} width={40} height={40} alt='phone' />
-                    <span>Phone</span>
+                    <span className='font-semibold'>Phone</span>
+                    <span>7224966643</span>
                 </div>
 
                 <div className="linkedinLogo flex flex-col justify-center items-center">
                     <Image src={linkedin} width={40} height={40} alt='linkedin' />
-                    <span>Linkedin</span>
+                    <span className='font-semibold'>Linkedin</span>
+                    <span><a href='https://www.linkedin.com/in/lokendra-kolhe/'> https://www.linkedin.com/in/lokendra-kolhe/</a></span>
                 </div>
 
                 <div className="linkedinLogo flex flex-col justify-center items-center">
                     <Image src={github} width={40} height={40} alt='github' />
-                    <span>Github</span>
+                    <span className='font-semibold'>Github</span>
+                    <span> <a href='https://github.com/lokendra-cmd'> https://github.com/lokendra-cmd </a></span>
                 </div>
 
             </div>
