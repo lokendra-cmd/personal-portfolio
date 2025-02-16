@@ -7,7 +7,7 @@ import github from '@/app/Images/github.png'
 
 const Contacts = () => {
     return (
-        <div className={`contacts flex flex-col gap-[10vw] justify-center items-center h-[100%] bg-[rgb(189,189,189)] pt-[13vh] pl-[2vw]`}>
+        <div className={`contacts  h-[100%] w-[100%] flex flex-col gap-[10vw] justify-center items-center bg-[rgb(189,189,189)] pt-[13vh] pl-[2vw]`}>
             <h1 className='text-[4rem] '>Contact Me</h1>
 
             <div className="contactIcons flex gap-[8vw]">

@@ -14,7 +14,7 @@ import python from '@/app/Images/python.png'
 
 const Skills = () => {
     return (
-        <div className={`about h-[100%] flex flex-col justify-center bg-[rgb(189,189,189)]  `}>
+        <div className={`skills h-[100%] w-[100%] flex flex-col justify-center bg-[rgb(189,189,189)]  `}>
             {/* <h1 className='text-[2.5rem] text-center mb-[3vh] mt-[8vh]'  style={{ textShadow: '2px 2px 4px rgba(255, 255, 255, 0.5)' }}>Skills</h1> */}
             <div className="flex justify-center items-center mt-[8vh] gap-[12vw] ">
                 <div className='skillsCard h-[70vh] w-[30vw] pt-[2vh] pb-[2vh] '>

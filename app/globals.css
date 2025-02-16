@@ -7,15 +7,23 @@
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
-/* Base styles for sections */
-section {
+/* 
+=================================================
+                  START OF SECTION
+=================================================
+*/
+.profileSection, .aboutSection, .experienceSection, .projectsSection, 
+.skillsSection, .educationSection, .contactasSection{
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     height: 110vh;
+    width: 100vw;
 }
+
 
 /* Section becomes visible when in view */
 section.visible {
@@ -23,16 +31,28 @@ section.visible {
     transform: translateY(0);
 }
 
-/* Navbar styles */
+/* 
+=================================================
+                  END OF SECTION
+=================================================
+*/
+
+
+
+/* 
+=================================================
+                  START OF HEADER
+=================================================
+*/
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    padding-right: 2vw;
+    padding-right: 5vw;
     z-index: 1000;
     height: 10vh;
-    /* height: 10vh; */
+    width: 100vw;
 }
 
 .navbar ul {
@@ -65,9 +85,149 @@ section.visible {
 .navbar ul li a:hover {
     cursor: pointer;
 }
+.glassmorphism {
+    backdrop-filter: blur(10px);
+}
+/* 
+=================================================
+                  END OF HEADER
+=================================================
+*/
 
-.customTextShadow {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+
+/* 
+=================================================
+                  START OF PROFILE
+=================================================
+*/
+
+.profile {
+    border: 1px solid black;
+    @apply h-[100%] w-[100%] flex flex-row gap-[8vw] items-center justify-center bg-[#bdbdbd];
+}
+
+.profileText {
+    @apply w-[50%] flex flex-col justify-center items-center;
+}
+
+.profileTitle{
+   @apply text-[3vw] w-[35vw];
+}
+
+.profileSubtitle {
+    @apply text-left w-[35vw] text-[1.5vw] mt-[1vh];
+    text-shadow: "2px 2px 4px rgba(0, 0, 0, 0.2)";
+}
+
+.picture {
+    width: 25vw;
+    height: 25vw;
+    border-radius: 50%;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* 
+=================================================
+                  END OF PROFILE
+=================================================
+*/
+
+
+/* 
+=================================================
+                  START OF ABOUT
+=================================================
+*/
+.about {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    background-color: white;
+}
+.pageHeading{
+    @apply text-[2.5vw] text-center mb-[3vh];
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+.aboutConatiner{
+   @apply flex justify-center items-center gap-[10vw]; 
+}
+.aboutPicture{
+    @apply h-[25vw] w-[25vw] shadow-lg rounded bg-opacity-50;
+    background-color:rgb(189,189,189);
+}
+.aboutText{
+    @apply w-[30vw] flex flex-col items-center;
+
+}
+.aboutText p{
+    @apply text-[1.2rem] my-[1vh];
+}
+/* 
+=================================================
+                  END OF ABOUT
+=================================================
+*/
+
+
+/* 
+=================================================
+                  START OF EXPERIENCE
+=================================================
+*/
+.experience{
+   @apply h-[100%] w-[100%] flex flex-col justify-center items-center;
+   background-color: rgb(189,189,189); 
+}
+.experienceContainer{
+    @apply flex justify-center gap-[4vw] mt-[5vw];
+
+}
+.experianceCards {
+    @apply w-[25vw] h-[50vh] p-[2vw];
+    background-color: #d1d1d1;
+    border-radius: 2vw;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Default light shadow */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transitions for transform and shadow */
+
+}
+.experianceCards h2{
+    @apply text-center font-medium text-[1.5rem] mb-[2vh] 
+    
+}
+.experianceCards span{
+    @apply font-medium;
+}
+.experianceCards p{
+    @apply mt-[2vh];
+}
+
+.experianceCards:hover {
+    transform: translateY(-10px);/* Translate the div upwards slightly on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);/* Increase the shadow for a glowing effect */
+}
+/* 
+=================================================
+                  END OF EXPERIENCE
+=================================================
+*/
+
+
+/* 
+=================================================
+                  START OF PROJECTS
+=================================================
+*/
+.projects{
+    @apply h-[100%] w-[100%] bg-white pt-[13vh] p-[2vw];
+
+}
+.projectsContainer{
+    @apply flex gap-[2vw] mt-[8vh];
 }
 
 .card {
@@ -78,6 +238,7 @@ section.visible {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
+    padding: 1.5vw;
 
 }
 
@@ -92,6 +253,22 @@ section.visible {
     opacity: 1;
 
 }
+.card h2{
+    @apply text-center text-[1.5rem] customTextShadow;
+}
+
+.card .image{
+    @apply mt-[2vh] h-[35vh];
+}
+
+.card .description{
+@apply mt-[2vh];
+}
+
+.card .description h3{
+   @apply text-[1rem] font-semibold;
+}
+
 
 .card .buttons {
     justify-content: center;
@@ -106,7 +283,7 @@ section.visible {
 }
 
 .card .buttons button {
-    background-color: rgba(108, 117, 125,0.6);
+    background-color: rgba(108, 117, 125, 0.6);
     backdrop-filter: blur(2px);
     padding: 1vh;
     cursor: pointer;
@@ -114,8 +291,9 @@ section.visible {
     border-radius: 8px;
     font-size: 16px;
     font-weight: 500;
-  color: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Soft shadow */
     /* white shadow */
     transition: opacity 0.5s ease-in-out;
     /* Slow and smooth transition for opacity */
@@ -127,39 +305,230 @@ section.visible {
     /* more pronounced white shadow on hover */
     cursor: pointer;
 }
+/* 
+=================================================
+                  END OF PROJECTS
+=================================================
+*/
+
+
+/* 
+=================================================
+       For Mobile Devices (below 640px)
+=================================================
+*/
+@media (max-width: 639px) {
+/* Styling for section*/
+    .section {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        height: 100vh;
+        width: 100vw;
+    }
+/* Styling end for section*/
+
+
+/* Styling for Header */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-right: 5vw;
+    z-index: 1000;
+    height: 10vh;
+    border: 1px solid black;
+    width: 100vw;
+}
+
+.navbar ul {
+    display: flex;
+    height: 100%;
+    align-content: center;
+    align-items: center;
+    justify-content: end;
+    gap: 2vw;
+    font-size: 3vw;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.navbar ul li a.active {
+    font-weight: bold;
+    text-decoration: none;
+    /* Remove default underline */
+    border-bottom: 0.5vw solid black;
+    padding-bottom: 1vh;
+}
+
+.glassmorphism {
+    backdrop-filter: blur(10px);
+}
+/* Styling end for Header */
+
+
+/* Styling for Profile Page*/
+.profile {
+@apply h-[100%] w-[100%] flex flex-col-reverse justify-center items-center gap-[10vh]
+}
+.profileText{
+   width: 100vw;
+}
+.profileTitle{
+    @apply text-[8vw] w-[100vw] text-center ;
+ }
+ 
+.profileSubtitle {
+     @apply   text-[5vw] w-[100vw] pl-[6vw];
+     text-shadow: "2px 2px 4px rgba(0, 0, 0, 0.2)";
+ }
+
+.picture {
+    width: 55vw;
+    height: 55vw;
+    border-radius: 50%;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+/* Styling end for profile page*/
+
+
+/* Styling for about page*/
+
+.about {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 25vh 0 8vh 0;
+}
+.pageHeading{
+    @apply text-[8vw] text-center ;
+}
+.aboutConatiner{
+    @apply flex flex-col justify-center items-center gap-[10vw]; 
+ }
+ .aboutPicture{
+    @apply h-[30vh] w-[30vh] shadow-lg rounded bg-opacity-50;
+    background-color:rgb(189,189,189);
+}
+.aboutText{
+    @apply w-[90vw] flex flex-col justify-center items-center mx-auto;
+
+}
+.aboutText p{
+    @apply text-[2vh];
+}
+/* Styling end for about page*/
+
+
+/* Styling  for experience page*/
+.experienceSection{
+    height: fit-content;
+    min-height: 100vh;
+    
+}
+.experience{
+    padding: 15vh 0 8vh 0;
+}
+.experienceContainer{
+    @apply flex flex-col justify-center gap-[5vh];
+}
+.experianceCards {
+    @apply w-[80vw] min-h-[30vh] p-[2vw];
+    background-color: #d1d1d1;
+    border-radius: 2vw;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Default light shadow */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transitions for transform and shadow */
+
+}
+.experianceCards h2{
+    @apply text-center font-medium text-[1.5rem] mb-[2vh] 
+    
+}
+.experianceCards span{
+    @apply font-medium;
+}
+.experianceCards p{
+    @apply mt-[2vh];
+}
+
+/* Styling end for experience page*/
+
+
+/* Styling for Projects page*/
+.projectsSection{
+    width: 100vw;
+    height: 310vh
+}
+.projects{
+ @apply   bg-white pt-[15vh] p-[2vw];
+ height: 310vh
+}
+
+.projectsContainer{
+    @apply flex flex-col justify-center items-center gap-[2vh];
+}
+
+.card {
+    height: 70vh;
+    width: 80vw;
+    background-color: rgb(189, 189, 189);
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    padding: 1.5vh;
+
+}
+/* Styling end for Projects page*/
+
+
+}
+
+
+
+
+
+
+.customTextShadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 
 .skillsCard {
 
     background-color: #d1d1d1;
     border-radius: 2vw;
-   
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Default light shadow */
-  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transitions for transform and shadow */
-   
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    /* Default light shadow */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    /* Smooth transitions for transform and shadow */
+
 }
 
 .skillsCard:hover {
-    transform: translateY(-10px); /* Translate the div upwards slightly on hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Increase the shadow for a glowing effect */
-
-}
-.experianceCards {
-
-    background-color: #d1d1d1;
-    border-radius: 2vw;
-   
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Default light shadow */
-  transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transitions for transform and shadow */
-   
-}
-
-.experianceCards:hover {
-    transform: translateY(-10px); /* Translate the div upwards slightly on hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Increase the shadow for a glowing effect */
+    transform: translateY(-10px);
+    /* Translate the div upwards slightly on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    /* Increase the shadow for a glowing effect */
 
 }
 
-.educationCard{
+
+
+.educationCard {
     height: 30vh;
     width: 25vw;
     padding: 1vw;
@@ -168,21 +537,21 @@ section.visible {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.educationCard:hover{
+
+.educationCard:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2),
         0 10px 10px rgba(0, 0, 0, 0.1);
 }
-.seprationLine{
+
+.seprationLine {
     width: 10vw;
     height: 1vh;
     background-color: rgb(189, 189, 189);
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    
+
 }
 
-.glassmorphism {
-    backdrop-filter: blur(10px);
-  }
-  
+
+
 

@@ -8,6 +8,7 @@ import Projects from "@/app/components/Projects";
 import Education from "@/app/components/Education";
 import Contacts from "@/app/components/Contacts";
 import Experience from "./components/Experience";
+import HeaderMobile from "./components/HeaderMobile";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("profile");
@@ -55,26 +56,26 @@ export default function Home() {
       <div>
         <Header activeSection={activeSection} scrollToSection={scrollToSection} />
 
-        <section id="profile" ref={sectionsRef.profile}>
+        <section className="profileSection" id="profile" ref={sectionsRef.profile}>
           <Profile />
         </section>
-        <section id="about" ref={sectionsRef.about}>
+        <section className="aboutSection" id="about" ref={sectionsRef.about}>
           <About />
         </section>
-        <section id="experience" ref={sectionsRef.experience}>
+        <section className="experienceSection" id="experience" ref={sectionsRef.experience}>
          <Experience/>
         </section>
 
-        <section id="projects" ref={sectionsRef.projects}>
+        <section className="projectsSection" id="projects" ref={sectionsRef.projects}>
           <Projects />
         </section>
-        <section id="skills" ref={sectionsRef.skills}>
+        <section className="skillsSection" id="skills" ref={sectionsRef.skills}>
           <Skills />
         </section>
-        <section id="education" ref={sectionsRef.education}>
+        <section className="educationSection" id="education" ref={sectionsRef.education}>
           <Education />
         </section>
-        <section id="contacts" ref={sectionsRef.contacts}>
+        <section className="contactasSection" id="contacts" ref={sectionsRef.contacts}>
           <Contacts />
         </section>
       </div>
