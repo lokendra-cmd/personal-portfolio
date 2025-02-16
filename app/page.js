@@ -8,7 +8,7 @@ import Projects from "@/app/components/Projects";
 import Education from "@/app/components/Education";
 import Contacts from "@/app/components/Contacts";
 import Experience from "./components/Experience";
-import HeaderMobile from "./components/HeaderMobile";
+// import HeaderMobile from "./components/HeaderMobile";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("profile");
