@@ -15,21 +15,32 @@ html {
                   START OF SECTION
 =================================================
 */
-.profileSection, .aboutSection, .experienceSection, .projectsSection, 
-.skillsSection, .educationSection, .contactasSection{
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    height: 110vh;
-    width: 100vw;
+@media (min-width: 768px) {
+
+    .profileSection,
+    .aboutSection,
+    .experienceSection,
+    .projectsSection,
+    .skillsSection,
+    .educationSection,
+    .contactasSection {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        height: 110vh;
+        width: 100vw;
+    }
+
+    /* Section becomes visible when in view */
+    section.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
-/* Section becomes visible when in view */
-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
+
+
 
 /* 
 =================================================
@@ -85,9 +96,11 @@ section.visible {
 .navbar ul li a:hover {
     cursor: pointer;
 }
+
 .glassmorphism {
     backdrop-filter: blur(10px);
 }
+
 /* 
 =================================================
                   END OF HEADER
@@ -111,8 +124,8 @@ section.visible {
     @apply w-[50%] flex flex-col justify-center items-center;
 }
 
-.profileTitle{
-   @apply text-[3vw] w-[35vw];
+.profileTitle {
+    @apply text-[3vw] w-[35vw];
 }
 
 .profileSubtitle {
@@ -149,24 +162,30 @@ section.visible {
     gap: 5vw;
     background-color: white;
 }
-.pageHeading{
+
+.pageHeading {
     @apply text-[2.5vw] text-center mb-[3vh];
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
-.aboutConatiner{
-   @apply flex justify-center items-center gap-[10vw]; 
+
+.aboutConatiner {
+    @apply flex justify-center items-center gap-[10vw];
 }
-.aboutPicture{
+
+.aboutPicture {
     @apply h-[25vw] w-[25vw] shadow-lg rounded bg-opacity-50;
-    background-color:rgb(189,189,189);
+    background-color: rgb(189, 189, 189);
 }
-.aboutText{
+
+.aboutText {
     @apply w-[30vw] flex flex-col items-center;
 
 }
-.aboutText p{
+
+.aboutText p {
     @apply text-[1.2rem] my-[1vh];
 }
+
 /* 
 =================================================
                   END OF ABOUT
@@ -179,37 +198,46 @@ section.visible {
                   START OF EXPERIENCE
 =================================================
 */
-.experience{
-   @apply h-[100%] w-[100%] flex flex-col justify-center items-center;
-   background-color: rgb(189,189,189); 
+.experience {
+    @apply h-[100%] w-[100%] flex flex-col justify-center items-center;
+    background-color: rgb(189, 189, 189);
 }
-.experienceContainer{
+
+.experienceContainer {
     @apply flex justify-center gap-[4vw] mt-[5vw];
 
 }
+
 .experianceCards {
     @apply w-[25vw] h-[50vh] p-[2vw];
     background-color: #d1d1d1;
     border-radius: 2vw;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Default light shadow */
-    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transitions for transform and shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    /* Default light shadow */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    /* Smooth transitions for transform and shadow */
 
 }
-.experianceCards h2{
-    @apply text-center font-medium text-[1.5rem] mb-[2vh] 
-    
+
+.experianceCards h2 {
+    @apply text-center font-medium text-[1.5rem] mb-[2vh]
 }
-.experianceCards span{
+
+.experianceCards span {
     @apply font-medium;
 }
-.experianceCards p{
+
+.experianceCards p {
     @apply mt-[2vh];
 }
 
 .experianceCards:hover {
-    transform: translateY(-10px);/* Translate the div upwards slightly on hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);/* Increase the shadow for a glowing effect */
+    transform: translateY(-10px);
+    /* Translate the div upwards slightly on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    /* Increase the shadow for a glowing effect */
 }
+
 /* 
 =================================================
                   END OF EXPERIENCE
@@ -222,11 +250,12 @@ section.visible {
                   START OF PROJECTS
 =================================================
 */
-.projects{
+.projects {
     @apply h-[100%] w-[100%] bg-white pt-[13vh] p-[2vw];
 
 }
-.projectsContainer{
+
+.projectsContainer {
     @apply flex gap-[2vw] mt-[8vh];
 }
 
@@ -253,20 +282,21 @@ section.visible {
     opacity: 1;
 
 }
-.card h2{
+
+.card h2 {
     @apply text-center text-[1.5rem] customTextShadow;
 }
 
-.card .image{
+.card .image {
     @apply mt-[2vh] h-[35vh];
 }
 
-.card .description{
-@apply mt-[2vh];
+.card .description {
+    @apply mt-[2vh];
 }
 
-.card .description h3{
-   @apply text-[1rem] font-semibold;
+.card .description h3 {
+    @apply text-[1rem] font-semibold;
 }
 
 
@@ -305,228 +335,67 @@ section.visible {
     /* more pronounced white shadow on hover */
     cursor: pointer;
 }
+
 /* 
 =================================================
                   END OF PROJECTS
 =================================================
 */
 
-
 /* 
 =================================================
-       For Mobile Devices (below 640px)
+                  START OF SKILLS
 =================================================
 */
-@media (max-width: 639px) {
-/* Styling for section*/
-    .section {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        height: 100vh;
-        width: 100vw;
-    }
-/* Styling end for section*/
 
-
-/* Styling for Header */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding-right: 5vw;
-    z-index: 1000;
-    height: 10vh;
-    border: 1px solid black;
-    width: 100vw;
+.skills {
+    @apply h-[100%] w-[100%] flex flex-col justify-center;
+    background-color: rgb(189, 189, 189);
 }
 
-.navbar ul {
-    display: flex;
-    height: 100%;
-    align-content: center;
-    align-items: center;
-    justify-content: end;
-    gap: 2vw;
-    font-size: 3vw;
+.skillsContainer {
+    @apply flex justify-center items-center mt-[8vh] gap-[12vw];
 }
 
-.navbar ul li {
-    list-style: none;
-}
-
-.navbar ul li a {
-    color: black;
-    text-decoration: none;
-}
-
-.navbar ul li a.active {
-    font-weight: bold;
-    text-decoration: none;
-    /* Remove default underline */
-    border-bottom: 0.5vw solid black;
-    padding-bottom: 1vh;
-}
-
-.glassmorphism {
-    backdrop-filter: blur(10px);
-}
-/* Styling end for Header */
-
-
-/* Styling for Profile Page*/
-.profile {
-@apply h-[100%] w-[100%] flex flex-col-reverse justify-center items-center gap-[10vh]
-}
-.profileText{
-   width: 100vw;
-}
-.profileTitle{
-    @apply text-[8vw] w-[100vw] text-center ;
- }
- 
-.profileSubtitle {
-     @apply   text-[5vw] w-[100vw] pl-[6vw];
-     text-shadow: "2px 2px 4px rgba(0, 0, 0, 0.2)";
- }
-
-.picture {
-    width: 55vw;
-    height: 55vw;
-    border-radius: 50%;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-}
-/* Styling end for profile page*/
-
-
-/* Styling for about page*/
-
-.about {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    padding: 25vh 0 8vh 0;
-}
-.pageHeading{
-    @apply text-[8vw] text-center ;
-}
-.aboutConatiner{
-    @apply flex flex-col justify-center items-center gap-[10vw]; 
- }
- .aboutPicture{
-    @apply h-[30vh] w-[30vh] shadow-lg rounded bg-opacity-50;
-    background-color:rgb(189,189,189);
-}
-.aboutText{
-    @apply w-[90vw] flex flex-col justify-center items-center mx-auto;
-
-}
-.aboutText p{
-    @apply text-[2vh];
-}
-/* Styling end for about page*/
-
-
-/* Styling  for experience page*/
-.experienceSection{
-    height: fit-content;
-    min-height: 100vh;
-    
-}
-.experience{
-    padding: 15vh 0 8vh 0;
-}
-.experienceContainer{
-    @apply flex flex-col justify-center gap-[5vh];
-}
-.experianceCards {
-    @apply w-[80vw] min-h-[30vh] p-[2vw];
+.skillsCard {
+    @apply h-[70vh] w-[30vw] pt-[2vh] pb-[2vh];
     background-color: #d1d1d1;
     border-radius: 2vw;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Default light shadow */
     transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transitions for transform and shadow */
 
 }
-.experianceCards h2{
-    @apply text-center font-medium text-[1.5rem] mb-[2vh] 
-    
-}
-.experianceCards span{
-    @apply font-medium;
-}
-.experianceCards p{
-    @apply mt-[2vh];
+.skillsCard:hover {
+    transform: translateY(-10px); /* Translate the div upwards slightly on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Increase the shadow for a glowing effect */
 }
 
-/* Styling end for experience page*/
-
-
-/* Styling for Projects page*/
-.projectsSection{
-    width: 100vw;
-    height: 310vh
-}
-.projects{
- @apply   bg-white pt-[15vh] p-[2vw];
- height: 310vh
-}
-
-.projectsContainer{
-    @apply flex flex-col justify-center items-center gap-[2vh];
-}
-
-.card {
-    height: 70vh;
-    width: 80vw;
-    background-color: rgb(189, 189, 189);
-    border-radius: 12px;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    padding: 1.5vh;
-
-}
-/* Styling end for Projects page*/
-
-
-}
-
-
-
-
-
-
-.customTextShadow {
+.skillsCard h2 {
+    @apply text-[1.5rem] text-center p-[1vh] font-medium;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* 
+=================================================
+                  END OF SKILLS
+=================================================
+*/
 
-.skillsCard {
-
-    background-color: #d1d1d1;
-    border-radius: 2vw;
-
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    /* Default light shadow */
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-    /* Smooth transitions for transform and shadow */
-
+/* 
+=================================================
+                  START OF EDUCATION
+=================================================
+*/
+.education{
+    @apply w-[100%] h-[100%] flex flex-col justify-center items-center gap-[20vh];
 }
-
-.skillsCard:hover {
-    transform: translateY(-10px);
-    /* Translate the div upwards slightly on hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    /* Increase the shadow for a glowing effect */
-
+.education h1{
+    @apply text-[2.5vw] ;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
-
-
+.educationContainer{
+    @apply flex items-center;
+}
 
 .educationCard {
     height: 30vh;
@@ -551,6 +420,383 @@ section.visible {
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 
 }
+/* 
+=================================================
+                  END OF EDUCATION
+=================================================
+*/
+
+/* 
+=================================================
+                  START OF CONTACTS
+=================================================
+*/
+.contacts{
+    @apply  h-[100%] w-[100%] flex flex-col gap-[10vw] justify-center items-center pt-[13vh] pl-[2vw];
+    background-color: rgb(189,189,189);
+}
+.contacts h1{
+    @apply text-[4rem] ;
+}
+.contactIcons{
+   @apply flex gap-[8vw];
+}
+.contactIcons .Logo{
+    @apply flex flex-col justify-center items-center;
+}
+/* 
+=================================================
+                  END OF CONTACTS
+=================================================
+*/
+
+
+/* 
+=================================================
+       For Mobile Devices (below 640px)
+=================================================
+*/
+@media (max-width: 639px) {
+
+    /* Styling for Header */
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding-right: 5vw;
+        z-index: 1000;
+        height: 10vh;
+        width: 100vw;
+    }
+
+    .navbar ul {
+        display: flex;
+        height: 100%;
+        align-content: center;
+        align-items: center;
+        justify-content: end;
+        gap: 2vw;
+        font-size: 3vw;
+    }
+
+    .navbar ul li {
+        list-style: none;
+    }
+
+    .navbar ul li a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .navbar ul li a.active {
+        font-weight: bold;
+        text-decoration: none;
+        /* Remove default underline */
+        border-bottom: 0.5vw solid black;
+        padding-bottom: 1vh;
+    }
+
+    .glassmorphism {
+        backdrop-filter: blur(10px);
+    }
+
+    /* Styling end for Header */
+
+
+    /* Styling for Profile Page*/
+    .profileSection {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .profile {
+        @apply h-[100%] w-[100%] flex flex-col-reverse justify-center items-center gap-[10vh]
+    }
+
+    .profileText {
+        width: 100vw;
+    }
+
+    .profileTitle {
+        @apply text-[8vw] w-[100vw] text-center;
+    }
+
+    .profileSubtitle {
+        @apply text-[5vw] w-[100vw] pl-[6vw];
+        text-shadow: "2px 2px 4px rgba(0, 0, 0, 0.2)";
+    }
+
+    .picture {
+        width: 55vw;
+        height: 55vw;
+        border-radius: 50%;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Styling end for profile page*/
+
+
+    /* Styling for about page*/
+    .aboutSection {
+        min-height: 100vh;
+        width: 100vw;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        padding: 25vh 0 8vh 0;
+    }
+
+    .pageHeading {
+        @apply text-[8vw] text-center;
+    }
+
+    .aboutConatiner {
+        @apply flex flex-col justify-center items-center gap-[10vw];
+    }
+
+    .aboutPicture {
+        @apply h-[30vh] w-[30vh] shadow-lg rounded bg-opacity-50;
+        background-color: rgb(189, 189, 189);
+    }
+
+    .aboutText {
+        @apply w-[90vw] flex flex-col justify-center items-center mx-auto;
+
+    }
+
+    .aboutText p {
+        @apply text-[2vh];
+    }
+
+    /* Styling end for about page*/
+
+
+    /* Styling  for experience page*/
+    .experienceSection {
+        height: fit-content;
+        min-height: 100vh;
+
+    }
+
+    .experience {
+        padding: 15vh 0 8vh 0;
+    }
+
+    .experienceContainer {
+        @apply flex flex-col justify-center gap-[5vh];
+    }
+
+    .experianceCards {
+        @apply w-[80vw] min-h-[30vh] p-[2vw];
+        background-color: #d1d1d1;
+        border-radius: 2vw;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        /* Default light shadow */
+        transition: transform 0.5s ease, box-shadow 0.5s ease;
+        /* Smooth transitions for transform and shadow */
+
+    }
+
+    .experianceCards h2 {
+        @apply text-center font-medium text-[1.5rem] mb-[2vh]
+    }
+
+    .experianceCards span {
+        @apply font-medium;
+    }
+
+    .experianceCards p {
+        @apply mt-[2vh];
+    }
+
+    /* Styling end for experience page*/
+
+
+    /* Styling for Projects page*/
+    .projectsSection {
+        height: fit-content;
+        min-height: 100vh;
+    }
+
+    .projects {
+        @apply bg-white pt-[15vh] p-[2vw];
+    }
+
+    .projectsContainer {
+        @apply flex flex-col items-center gap-[4vh];
+        padding: 4vh 0 4vh 0;
+    }
+
+    .card {
+        height: 70vh;
+        width: 80vw;
+        background-color: rgb(189, 189, 189);
+        border-radius: 12px;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        padding: 1.5vh;
+
+    }
+
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2),
+            0 10px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .card:hover .buttons button {
+        cursor: pointer;
+        opacity: 1;
+
+    }
+
+    .card h2 {
+        @apply text-center text-[1.5rem] customTextShadow;
+    }
+
+    .card .image {
+        @apply mt-[2vh] h-[35vh];
+    }
+
+    .card .description {
+        @apply mt-[2vh];
+    }
+
+    .card .description h3 {
+        @apply text-[1rem] font-semibold;
+    }
+
+
+    .card .buttons {
+        justify-content: center;
+        row-gap: 2vh;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        align-items: center;
+        top: 40%;
+        left: 0;
+        right: 0;
+    }
+
+    .card .buttons button {
+        background-color: rgba(108, 117, 125, 0.6);
+        backdrop-filter: blur(2px);
+        padding: 1vh;
+        cursor: pointer;
+        width: 20vw;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        /* Soft shadow */
+        /* white shadow */
+        transition: opacity 0.5s ease-in-out;
+        /* Slow and smooth transition for opacity */
+        opacity: 0;
+    }
+
+    .card .buttons button:hover {
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        /* more pronounced white shadow on hover */
+    }
+
+    /* Styling end for Projects page*/
+
+
+    /* Styling  for Skills page*/
+    .skills{
+        @apply flex flex-col justify-center;
+        background-color: rgb(189, 189, 189);
+        width: 100vw;
+        min-height: 100vh;
+        padding: 4vh 0 4vh 0;
+    }
+
+    .skillsContainer {
+        @apply flex flex-col items-center;
+    }
+
+    .skillsCard {
+        @apply  w-[80vw];
+        background-color: #d1d1d1;
+        padding: 4vh 2vh 4vh 2vh;
+        border-radius: 2vw;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Default light shadow */
+        transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transitions for transform and shadow */
+
+    }
+
+    /* Styling end for Skills page*/
+
+
+    /* Styling  for Education page*/
+    .education{
+        padding: 8vh 2vh 8vh 2vh;
+    }
+    .education h1{
+     @apply text-[8vw] text-center;
+    }
+    .educationContainer{
+        @apply flex flex-col;
+    }
+
+    .educationCard {
+        width: 80vw;
+        padding: 1vh 2vw 2vh 3vw;
+        background-color: rgb(189, 189, 189);
+        border-radius: 2vw;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+.seprationLine {
+    width: 2vw;
+    height: 10vh;
+    background-color: rgb(189, 189, 189);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+    /* Styling end for Education page*/
+
+
+    /* Styling for Contacts page*/
+    .contacts{
+        padding: 4vh 0 8vh 0;
+    }
+    .contacts h1{
+        @apply text-[3rem] customTextShadow;
+    }
+    .contactIcons{
+        @apply flex flex-col gap-[4vh];
+     }
+     .contactIcons .Logo{
+         @apply flex flex-col justify-center items-center;
+     }
+    /* Styling end for Contacts page*/
+
+
+}
+
+
+
+
+
+
+.customTextShadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
 
 
 

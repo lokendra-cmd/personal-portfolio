@@ -4,9 +4,9 @@ import { HiCalendar } from "react-icons/hi";
 
 const Education = () => {
     return (
-    <div className="w-[100%] h-[100%] flex flex-col justify-center items-center gap-[20vh] ">
-        <h1 className="text-[2.5rem] " style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)' }}>Education</h1>
-        <div className="flex items-center">
+    <div className="education">
+        <h1>Education</h1>
+        <div className="educationContainer">
             <div className="educationCard ">
                 <h2 className="text-center text-[1.5rem] customTextShadow">Graduation</h2>
                 <p className="font-bold mt-[2vh]">2019 - 2023</p>
