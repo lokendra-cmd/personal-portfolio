@@ -29,7 +29,8 @@ export default function Home() {
 
   // Intersection Observer to detect when section comes into view
   useEffect(() => {
-    const observerOptions = { root: null, threshold: 0.5 };
+    const isMobile = window.innerWidth < 768; // Determine if the device is mobile
+    const observerOptions = { root: null, threshold: isMobile ? 0.2 : 0.5,};
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
