@@ -1,6 +1,6 @@
 import React from 'react'
-import { fadeInFromBottom, fadeOutToTop } from '@/app/Animation/animations'
-import { motion } from "motion/react"
+import Image from 'next/image'
+import profile from '@/app/Images/profile.jpg'
 
 const About = () => {
     return (
@@ -8,7 +8,7 @@ const About = () => {
             <h1 className='pageHeading'>About</h1>
             <div className="aboutConatiner">
                 <div className='aboutPicture'>
-
+                    <Image src={profile} alt="Profile Picture" className='' />
                 </div>
                 <div className='aboutText'>
                     <p>

@@ -1,4 +1,6 @@
 import React from 'react'
+import Image from 'next/image'
+import newsgram_demo from '@/app/Images/newsgram_demo.jpg'
 import { Lexend } from 'next/font/google'
 
 const lexend = Lexend({ subsets: ['latin'], weight: '200' })
@@ -12,16 +14,16 @@ const Projects = () => {
                 <div className="card">
                     <h2>Newsgram</h2>
                     <div className="image">
-
+                    <Image src={newsgram_demo} height={200} width={200} alt="Newsgram" className='projectImages' />
                     </div>
                     <div className="description">
-                        <h3>Tech Stack: React, Bootstarp</h3>
+                        <h3>Tech Stack: NextJS, TailwindCSS</h3>
                         <p className={`${lexend.className}`}>Newsgram is a news website that fetches the latest headlines from the News API and displays them in a clean, card-based layout with infinite scrolling for a seamless browsing experience.</p>
 
                     </div>
                     <div className="buttons ">
-                        <button href="#" className=" btn">Visit</button>
-                        <button href="#" className=" btn">GitHub</button>
+                        <button onClick={() => window.open("https://newsgram-lokendra-cmds-projects.vercel.app/", "_blank")} className=" btn">Visit</button>
+                        <button onClick={() => window.open("https://github.com/lokendra-cmd/Newsgram", "_blank")}  className=" btn">GitHub</button>
                     </div>
                 </div>
 

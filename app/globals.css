@@ -335,6 +335,11 @@ html {
     /* more pronounced white shadow on hover */
     cursor: pointer;
 }
+.projectImages{
+    height: 100%;
+    width: 100%;
+    border: 2px solid black;
+}
 
 /* 
 =================================================
@@ -561,8 +566,9 @@ html {
     }
 
     .aboutPicture {
-        @apply h-[30vh] w-[30vh] shadow-lg rounded bg-opacity-50;
+        @apply h-[30vh] w-[30vh] shadow-lg rounded bg-opacity-50 ;
         background-color: rgb(189, 189, 189);
+        margin-bottom: 5vh;
     }
 
     .aboutText {

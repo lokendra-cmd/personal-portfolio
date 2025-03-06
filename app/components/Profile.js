@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import profile from '@/app/Images/profile.avif'
+import profile from '@/app/Images/profile.jpg'
 import { motion } from "motion/react"
 import { Bricolage_Grotesque } from 'next/font/google'
 
