@@ -22,7 +22,7 @@ const Projects = () => {
 
                     </div>
                     <div className="buttons ">
-                        <button onClick={() => window.open("https://newsgram-lokendra-cmds-projects.vercel.app/", "_blank")} className=" btn">Visit</button>
+                        <button onClick={() => window.open("https://newsgram-phi.vercel.app/", "_blank")} className=" btn">Visit</button>
                         <button onClick={() => window.open("https://github.com/lokendra-cmd/Newsgram", "_blank")}  className=" btn">GitHub</button>
                     </div>
                 </div>
