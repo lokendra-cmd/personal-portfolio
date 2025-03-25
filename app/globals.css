@@ -256,7 +256,7 @@ html {
 }
 
 .projectsContainer {
-    @apply flex gap-[2vw] mt-[8vh];
+    @apply flex gap-[2vw] mt-[8vh] justify-center;
 }
 
 .card {

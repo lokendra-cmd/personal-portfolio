@@ -1,11 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import newsgram_demo from '@/app/Images/newsgram_demo.jpg'
+import milesofsupport from '@/app/Images/milesofsupport.png'
 import { Lexend } from 'next/font/google'
+import VideoModal from './VideoModal'
 
 const lexend = Lexend({ subsets: ['latin'], weight: '200' })
 
 const Projects = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [currentVideoId, setCurrentVideoId] = useState('');
+
+    const openVideoModal = (videoId) => {
+        setCurrentVideoId(videoId);
+        setIsModalOpen(true);
+    };
+
     return (
         <div className={`projects`}>
             <h1 className='pageHeading'>Projects</h1>
@@ -46,7 +56,7 @@ const Projects = () => {
                 <div className="card">
                     <h2 >Miles of support</h2>
                     <div className="image ">
-
+                    <Image src={milesofsupport} height={200} width={200} alt="Newsgram" className='projectImages' />
                     </div>
                     <div className="description">
                         <h3>Tech Stack: Next, Tailwind, Mongodb</h3>
@@ -54,12 +64,12 @@ const Projects = () => {
 
                     </div>
                     <div className="buttons ">
-                        <button href="#" className=" btn">Visit</button>
-                        <button href="#" className=" btn">GitHub</button>
+                        <button onClick={() => openVideoModal('IUEQYEcYTi8')} className="btn">Watch Demo</button>
+                        <button onClick={() => window.open("https://github.com/yourusername/miles-of-support", "_blank")} className="btn">GitHub</button>
                     </div>
                 </div>
 
-                <div className="card">
+                {/* <div className="card">
                     <h2 >Path grid</h2>
                     <div className="image">
 
@@ -73,11 +83,17 @@ const Projects = () => {
                         <button href="#" className=" btn">Visit</button>
                         <button href="#" className=" btn">GitHub</button>
                     </div>
-                </div>
+                </div> */}
 
                
 
             </div>
+
+            <VideoModal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+                videoId={currentVideoId}
+            />
         </div>
     )
 }
