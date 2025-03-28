@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import newsgram_demo from '@/app/Images/newsgram_demo.jpg'
+import inspect_demo from '@/app/Images/inspect_demo.jpg'
 import milesofsupport from '@/app/Images/milesofsupport.png'
 import { Lexend } from 'next/font/google'
 import VideoModal from './VideoModal'
@@ -38,18 +39,18 @@ const Projects = () => {
                 </div>
 
                 <div className="card ">
-                    <h2 >Algo Trading</h2>
+                    <h2 >Inspect</h2>
                     <div className="image">
-
+                    <Image src={inspect_demo} height={200} width={200} alt="Newsgram" className='projectImages' />
                     </div>
                     <div className="description">
-                        <h3>Tech Stack: React, Python, Django</h3>
-                        <p className={`${lexend.className}`}>AlgoTrade offers algorithm-driven buy and sell suggestions using strategies based on RSI, Pivot Points, and Supertrend. It analyzes market trends and provide signals.</p>
+                        <h3>Tech Stack: React, Python, Flask</h3>
+                        <p className={`${lexend.className}`}>INSPECT analyzes stocks fundamentally, compares two stocks side by side, and recommends similar stocks based on key metrics, helping investors make informed decisions easily. </p>
 
                     </div>
                     <div className="buttons ">
-                        <button href="#" className=" btn">Visit</button>
-                        <button href="#" className=" btn">GitHub</button>
+                        <button onClick={() => openVideoModal('HEEibYnZw_s')} className="btn">Watch Demo</button>
+                        <button onClick={() => window.open("https://github.com/yourusername/miles-of-support", "_blank")} className="btn">GitHub</button>
                     </div>
                 </div>
 
