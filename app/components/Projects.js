@@ -50,7 +50,7 @@ const Projects = () => {
                     </div>
                     <div className="buttons ">
                         <button onClick={() => openVideoModal('HEEibYnZw_s')} className="btn">Watch Demo</button>
-                        <button onClick={() => window.open("https://github.com/yourusername/miles-of-support", "_blank")} className="btn">GitHub</button>
+                        {/* <button onClick={() => window.open("https://github.com/lokendra-cmd/miles-of-support", "_blank")} className="btn">GitHub</button> */}
                     </div>
                 </div>
 
@@ -66,7 +66,7 @@ const Projects = () => {
                     </div>
                     <div className="buttons ">
                         <button onClick={() => openVideoModal('IUEQYEcYTi8')} className="btn">Watch Demo</button>
-                        <button onClick={() => window.open("https://github.com/yourusername/miles-of-support", "_blank")} className="btn">GitHub</button>
+                        <button onClick={() => window.open("https://github.com/lokendra-cmd/miles-of-support", "_blank")} className="btn">GitHub</button>
                     </div>
                 </div>
 
