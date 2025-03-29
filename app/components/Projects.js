@@ -49,7 +49,7 @@ const Projects = () => {
 
                     </div>
                     <div className="buttons ">
-                        <button onClick={() => openVideoModal('')} className="btn">Watch Demo</button>
+                        <button onClick={() => openVideoModal('V9EFBDovzxw')} className="btn">Watch Demo</button>
                         <button onClick={() => window.open("https://github.com/lokendra-cmd/inspect", "_blank")} className="btn">GitHub</button>
                     </div>
                 </div>
